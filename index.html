@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Alvin ❤️</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+
+    background:
+    linear-gradient(
+        rgba(255,117,140,0.20),
+        rgba(255,126,179,0.20)
+    ),
+    url('caleb-1.jpg');
+
+    background-size:contain;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    height:100vh;
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    color:black;
+}
+
+body::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:linear-gradient(
+        -45deg,
+        rgba(255,117,140,.15),
+        rgba(255,126,179,.15),
+        rgba(255,177,153,.15),
+        rgba(255,209,220,.15)
+    );
+
+    background-size:400% 400%;
+    animation:gradient 10s ease infinite;
+}
+
+@keyframes gradient{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.container{
+    position:relative;
+    z-index:2;
+
+    max-width:850px;
+    padding:30px;
+
+    background:rgba(255,255,255,0.10);
+    border-radius:20px;
+    backdrop-filter:blur(5px);
+}
+
+.alvin-photo{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid white;
+    margin-bottom:20px;
+    box-shadow:0 0 25px rgba(255,255,255,0.8);
+}
+
+h1{
+    font-size:3rem;
+    margin-bottom:20px;
+    animation:fadeIn 2s ease;
+}
+
+p{
+    font-size:1.3rem;
+    line-height:1.8;
+}
+
+button{
+    margin-top:25px;
+    padding:15px 35px;
+    border:none;
+    border-radius:30px;
+    font-size:1rem;
+    font-weight:bold;
+    cursor:pointer;
+    background:white;
+    color:#ff4f81;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.1);
+}
+
+#hiddenMessage{
+    display:none;
+    margin-top:25px;
+    font-size:1.3rem;
+    animation:fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.heart{
+    position:absolute;
+    z-index:1;
+    animation:floatUp linear infinite;
+}
+
+@keyframes floatUp{
+    from{
+        transform:translateY(100vh);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-120px);
+        opacity:0;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<img src="INSERT PICTURE" class="alvin-photo">
+
+<h1>🎉 Happy Birthday Alvin ❤️</h1>
+
+<p>
+Today is all about celebrating you.<br><br>
+
+Thank you for your kindness, your laughter, your strength,
+and for being such a special part of my life.<br><br>
+
+I pray this new year brings you happiness, favour,
+good health, success and countless beautiful memories.
+</p>
+
+<button onclick="showMessage()">
+Click For Your Surprise ❤️
+</button>
+
+<div id="hiddenMessage">
+
+💌 Dear Alvin,<br><br>
+
+You are appreciated more than words can express.<br><br>
+
+May this new year bring you peace, joy, growth,
+and every blessing your heart desires.<br><br>
+
+Thank you for being you.<br><br>
+
+From me to you,<br>
+Miss Kiteme ❤️
+
+</div>
+
+</div>
+
+<script>
+
+function showMessage(){
+    document.getElementById("hiddenMessage").style.display="block";
+}
+
+function createHeart(){
+
+    const heart=document.createElement("div");
+
+    heart.classList.add("heart");
+
+    heart.innerHTML=["❤️","💕","💖","💘","💝"][Math.floor(Math.random()*5)];
+
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.fontSize=(20+Math.random()*30)+"px";
+    heart.style.animationDuration=(4+Math.random()*5)+"s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },9000);
+}
+
+setInterval(createHeart,250);
+
+</script>
+
+</body>
+</html>
+    
