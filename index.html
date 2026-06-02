@@ -146,6 +146,21 @@ button:hover{
     }
 }
 
+.footer{
+    position:fixed;
+    bottom:15px;
+    left:0;
+    width:100%;
+
+    text-align:center;
+    font-size:1.1rem;
+    font-weight:bold;
+
+    color:black;
+
+    z-index:3;
+}
+
 </style>
 </head>
 
@@ -153,11 +168,11 @@ button:hover{
 
 <div class="container">
 
-<img src="INSERT PICTURE" class="alvin-photo">
+<img src="caleb-1.jpg" class="alvin-photo">
 
 <h1>🎉 Happy Birthday Alvin ❤️</h1>
 
-<p>
+<p> <b>
 Today is all about celebrating you.<br><br>
 
 Thank you for your kindness, your laughter, your strength,
@@ -173,18 +188,17 @@ Click For Your Surprise ❤️
 
 <div id="hiddenMessage">
 
-💌 Dear Alvin,<br><br>
+💌 Hi babe,<br><br>
 
-Over the years i've come to learn that love is not just a feeling it is a choice.<br><br>
+Over the years I've come to learn that love is not just a feeling, it is a choice.<b><br><br>
 
-And through the easy days, the confusing days, the silent days and the days when it wasn't easy, i have still chosen you.<br><br>
-Not because everything has been perfect but because what i feel for you has remained genuine.<br><br>
+And through the easy days, the confusing days, the silent days and the days when it wasn't easy, I have still chosen you.<br><br>
 
-As you celebrate another year today, i hope you never forget how deeply valued and cared you are.<br><br>
-Happy Birthday ❤️<br>
+Not because everything has been perfect, but because what I feel for you has remained genuine.<br><br>
 
-From me to you,<br>
-Miss Kiteme ❤️
+As you celebrate another year today, I hope you never forget how deeply valued and cared for you are.<br><br>
+
+Happy Birthday ❤️. From me to you,<br>
 
 </div>
 
@@ -202,7 +216,7 @@ function createHeart(){
 
     heart.classList.add("heart");
 
-    heart.innerHTML=["❤️","💕","💖","💘","💝"][Math.floor(Math.random()*5)];
+    heart.innerHTML=["❤️","💕","💖","💘","🎂","💝"][Math.floor(Math.random()*6)];
 
     heart.style.left=Math.random()*100+"vw";
     heart.style.fontSize=(20+Math.random()*30)+"px";
@@ -219,6 +233,9 @@ setInterval(createHeart,250);
 
 </script>
 
+<div class="footer">
+    ❤️ Happy 29th Birthday, Alvin ❤️. Celebrating you Today and Always
+</div>
+
 </body>
 </html>
-    
